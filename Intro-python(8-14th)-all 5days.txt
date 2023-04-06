@@ -1,0 +1,1791 @@
+Introduction to python 
+-------------------------
+Introduced by Guido von Russom- in the year 1991
+
+
+Features
+---------
+Python is an opensource
+
+Python is interpreted --> bytecode
+
+Python is object oriented 
+
+Python is easy to understand 
+
+Python has simple syntax
+
+python is interactive 
+
+python is extensible 
+
+python also support wide range of application
+
+python works on different platforms
+
+python also supports the database connection 
+
+python is dynamically programmed language
+
+inorder to assign a value
+
+in c
+-----
+
+declare 
+
+assign
+
+int x;
+
+x = 100
+
+x = 4.5 --> it is acceptable 
+
+in python 
+
+assign
+
+x = 100 --> accepted 
+
+x is variable holding int data 
+
+x = 78.9 --> accepted 
+
+x is variable with float datatype
+
+
+
+Why python??
+------------
+open source 
+
+simple programming language 
+
+easy syntax
+
+complete your code in few lines 
+
+
+version
+--------
+python 2
+
+python 3 --> use 
+
+
+Softwares
+----------
+1. python ide 3.8/3.9/3.10/3.11
+2. pycharm community edition 
+3. python playground in lex course
+4. python playground external link 
+5. VScode
+
+
+Python playground
+-----------------
+
+Pycharm
+---------
+
+
+
+Comment
+--------
+# --> single line
+'''    ''' --> multi line 
+"""    """ --> multi line 
+
+Print()
+--------
+display the content given inside the quotes 
+
+print("Im in pycharm community edition")
+
+print("this is easy")
+print("we can write anything ")
+
+
+
+print("adding the values")
+a = 10
+b = 40
+print(a+b)
+
+
+
+type()
+------
+type of the data 
+
+
+a = 30
+b = 5.678
+c = 'python'
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print(c)
+print(type(c))
+
+len()
+-----
+length of the variable
+
+print(len(c))
+
+
+input() --> all the values entered are considered as string datatype by default
+-------
+take input user 
+
+x = input("give some val")
+print("the v alue entered is:", x)
+print(type(x))
+
+identifers
+----------
+used to identify --> variable, function, module
+
+a --> variable
+a() --> functions 
+
+naming
+------
+start with alphabets
+should not start with digit, spec charaters 
+can start with underscore 
+we can have digits in the name 
+name should not be a keyword 
+
+a = 10 --> allowed
+_a = 10 --> allowed 
+1a = 10 --> not allowed 
+a1 = 10 --> allowed 
+
+
+Variable 
+---------
+container which hold the value in it 
+
+a = 10
+b = 30
+
+
+
+Type converstion 
+------------------
+implicit type conversion --> internally
+
+a = 123
+b = 45.678
+print(type(a))
+print(type(b))
+print(a+b)
+print(type(a + b))
+
+
+explicit type conversion --> externally 
+
+1.
+a = input("enter value")
+b = 345
+print(type(a))
+print(type(b))
+print(a+b)
+
+
+NOTE: here we get an error because the value entered using input function is considered as string 
+int + string is not possible 
+
+
+2. 
+a = float(input("enter value"))
+b = 345
+print(type(a))
+print(type(b))
+print(a+b)
+
+
+3. 
+a = input("enter value")
+b = 34
+print(type(a))
+print(type(b))
+print(float(a)+int(b))
+
+
+4. 
+
+a = "10"
+b = 20
+print(int(a)+b)
+
+
+Keywords --> reserved words 
+---------
+False		await		else			import		pass
+None			break		except		in			raise
+True			class		finally		is			return
+and			continue		for			lambda		try
+as			def			from			nonlocal		while
+assert		del			global		not			with
+async		elif			if			or			yield
+
+
+OPerators
+-------------
+airthematic --> +, -, *, /, %, //
+
+relational --> <, >, <=, >=, ==
+
+assignment --> =, +=, -=, *=
+
+logical --> AND, OR, NOT
+
+--------------------------------------------------------------------------------------------------------------
+DAY 2
+-----
+Control structures
+-------------------
+Conditional statements /selection
+iterative statements /looping
+
+selection
+---------
+condition --> true / false 
+
+if 
+if -else 
+nested - if 
+else - if 
+
+
+if --> 
+---
+if the condition is true --> true block
+
+if the condition is false --> outside 
+
+syntax
+-------
+if(condition):
+    block of if statements
+
+out of the block
+
+
+Note : 
+------
+1. ":" is mandatory after condition 
+2. Indentation (4 spaces) should be given after condition 
+
+
+if(condition)
+{ --> starting of block
+----------
+----------
+
+} --> ending of the block
+
+
+
+a = 100
+b = 200
+if a < b:
+    print("a is greater")
+    print("inside if")
+    print("bye")
+print("outside of if ")
+print("always execute")
+
+
+
+if - else 
+---------
+if the condition is true --> true block
+
+if the condition is false --> else block
+
+
+syntax
+-------
+if condition:
+    block
+else:
+    block
+out of if
+
+
+
+if(condition)
+{ --> starting of block
+----------
+----------
+
+} --> ending of the block
+else
+{
+---------
+------------
+}
+printf("");
+
+
+
+a = 100
+b = 200
+if a < b:
+    print("a is greater")
+    print("inside if")
+    print("bye")
+else:
+    print("b is greater")
+    print("inside else")
+    print("bye")
+print("outside of if ")
+print("always execute") 
+
+
+
+2.
+a = int(input("enter no"))
+b = int(input("enter no"))
+if a < b:
+    print("a is greater")
+    print("inside if")
+    print("bye")
+else:
+    print("b is greater")
+    print("inside else")
+    print("bye")
+print("outside of if ")
+print("always execute")
+
+
+
+nested if 
+---------
+multiple condition 
+
+Representing if block inside another if 
+
+syntax
+------
+if condition:
+    if condition:
+        if condition:
+            statement
+        else:
+            statement
+     else:
+         statement
+else: 
+    statement    
+
+
+
+
+x = 35
+if x > 10:
+    print("above 10")
+    if x > 20:
+        print("above 20")
+        if x > 30:
+            print("above 30")
+        else:
+            print("not above 30")
+    else:
+        print("not above 20")
+else:
+    print("not above 10")
+print("out of if")
+
+
+
+Else - if
+----------
+check for the condition
+if condition is true --> execute the statement
+if condition is false --> checks the condition 
+
+
+syntax
+------
+if condition:
+    statement/s
+elif condition:
+    statement/s
+elif condition:
+    statement/s
+default statement
+
+
+x = 50
+y = 20
+if x > y:
+    print("x is greater")
+elif x == y:
+    print("x, y are equal")
+else:
+    print("y is greater")
+print("out of if ")
+
+
+
+
+
+Looping statements
+--------------------
+repeating the set of statements for multiple times 
+
+for 
+
+while 
+
+
+for
+----
+
+syntax
+-------
+for variable in range:
+    block of statements
+
+range --> start value
+		  end  value
+		  step value (optional) --> +ve(increase by 1), -ve(decrease by 1) 
+          default value of step is 1(increase by 1)  
+Note : last/ end value of the range will not be considered 
+
+
+
+1. With range 
+for i in range(1, 20, 3):
+    print(i)
+
+
+
+2. With range 
+for i in range(21, 0, -5):
+    print(i)
+
+
+3. Without range
+for i in 5, 10, 15, 20:
+    print(i)
+
+4. with and witout range 
+
+for i in 5, 10, 15, 20:
+    for num in range(1, 3):
+        x = i * num
+        print(x)
+
+
+
+i = 5, 10, 15, 20
+num = 1, 2
+
+x = i * num
+x = 5 * 1
+x = 5 * 2
+x = 10 * 1
+x = 10 * 2 
+
+
+5. for i in 5, 10, 15, 20:
+    for num in range(1, 3):
+        x = i * num
+        print(x, end = ",")
+
+
+While
+------
+repeart the set of statements 
+
+Syntax
+------
+While condition:
+      block of code 
+
+i = 1
+while i < 10:
+    print(i)
+    i += 1
+print("out of while")
+
+
+break 
+-----
+--> break the flow of execution 
+
+
+i = 1
+while i < 10:
+    print(i)
+    if i == 5:
+        break
+    i += 1
+print("out of while")
+
+
+continue
+---------
+--> skip the current execution and continue with other 
+
+i = 1
+while i < 20:
+    i += 1
+    if i == 10:
+        continue
+    print(i)
+print("out of while")
+
+
+
+Functions
+----------
+
+block of statements to perform a specific task 
+
+reuse
+
+1. define the function --> task 
+2. function call --> use definition of the function 
+
+
+return --> give result 
+
+
+pass --> null statement 
+
+Note : execution starts from fun call/ statement
+Syntax
+------
+def function_name():
+   statement/s
+
+function_name()
+
+
+1.
+
+def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+
+print("execution starts here")
+print("hai all")
+sum()  #function call
+
+
+
+2.
+
+def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+sub() #fun call
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()  #function call
+
+
+3. No error as fun call is inside other function
+def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+    sub() #fun call
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()  #function call
+
+
+
+
+4. Throws an error as fun call is before fun definition  
+def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+sub() #fun call
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()  #function call
+
+
+
+Pass --> null statement 
+----
+
+
+def sum():
+    pass
+def sub():
+    pass
+def mul():
+    pass
+def div():
+    pass
+sum()
+sub()
+mul()
+div()
+
+
+return 
+-------
+return the result back to the function call
+
+1.
+
+def sum():
+    a = 10
+    b = 20
+    c = a + b
+    return c
+x = sum()
+print(x)
+
+
+
+2. 
+
+def sum():
+    a = 10
+    b = 20
+    c = a + b
+    return c
+print(sum())
+
+
+
+
+
+Parameters / argument
+----------------------
+actual arguments 
+value that is passed with fun call
+
+
+formal arguments 
+value that is used at fun definition 
+
+
+1. 
+def sum(a, b):
+    c = a + b
+    print(c)
+sum(10, 20)
+
+
+2. 
+def sum(a, b):
+    c = a + b
+    print(c)
+a = 23
+b = 45
+sum(a, b)
+
+
+3. 
+
+def sum(a, b):
+    c = a + b
+    print(c)
+a = int(input("enter a"))
+b = int(input("enter b"))
+sum(a, b)
+
+
+passing the value
+-------------------
+pass by value --> no change --> immutable
+
+
+pass by reference --> changes --> mutable
+
+
+in c 
+-----
+pass by val --> give values using variables
+
+pass by reference --> address(*)
+
+
+
+type of arguments
+--------------------
+1. positional argument 
+
+--> no of arguments/ values in fun call should be equal to no of arguments in fun definition 
+
+def sum(a, b, x):  --> by default a = 10, b = 20, x = 30, 40?
+    c = a + b + x
+    print(c)
+sum(10, 20, 30, 40)
+
+Note : gives positional parameter error 
+
+
+2. keyword argument
+
+the values are assigned to the specific key
+
+def sum(a, b, x):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+    c = a + b + x
+    print(c)
+sum(b = 10, x = 20, a = 30)
+
+
+
+3. default argument
+
+will store the value by default, which will not change 
+
+Note : the default value should be at the end 
+
+def sum(a, b, x, y = 100):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+    c = a + b + x + y
+    print(c)
+sum(100, 200, 300)
+
+4. variable argument 
+
+if there extra values in the fun call it should be holded 
+variable argument will hold with *
+def sum(a, b, *x):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+sum(100, 200, 300, 500, 789, 123)
+----------------------------------------------------------------------------------------------------------
+Day 3 
+------
+Scope of the variable 
+---------------------
+visibility/ accessability of a parameter
+
+it can be in same block / outside 
+
+local --> within the block
+
+global --> variable can be used anywhere 
+
+
+
+main()
+{
+int a; --> a is a local var so it cant be printed outside the block
+a = 10;
+print("%d", a);
+}
+print("%d", a);
+
+
+1.
+def demo():
+    x = 25
+    print(x)
+demo()
+
+2.
+x = 10 #global 
+def demo():
+    print(x)
+demo()
+print("outside:", x)
+
+
+3. 
+def demo():
+    x = 25
+    print(x)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)
+
+
+output:
+
+100
+25
+error
+
+
+4.
+x = 25
+def demo():
+
+    print(x)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)
+
+
+output: 
+
+100
+25
+25
+
+
+
+5.
+x = 25
+def demo():
+    print(y)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)
+
+
+100
+error
+
+
+6.
+a = 100
+def demo():
+    print("the val of a is :", a)
+def demo1():
+    b = a +100
+    print("val of b is :", b)
+    demo()
+demo()
+demo1()
+
+7. 
+def demo():
+    global a
+    a = 100
+    print("the val of a from demo is:", a)
+def demo1():
+    b = 200
+    c = a+b
+    print("the value of c from demo1 is : ", c)
+demo()
+demo1()
+print(a)
+
+
+Collections
+-----------
+collections are container whichg stores the set of values together
+
+List 
+Tuple
+String
+Set 
+Dictionary
+
+types
+-----
+Mutable --> Whose value can be changed even after creating 
+
+Immutable -->Whose values cannot be changed once they are created 
+
+List --> [] 
+----
+different types/set of data 
+mutable 
+empty list 
+
+definition
+-----------
+list_variable = [val1, val2, val3, ...........]
+index =			0       1     2   ...........
+
+l1 = [10, 	20, 		30, 40, 50]
+    l1[0]   l1[1]   l1[2].......
+
+
+
+l1 = [10, 20, 30]
+print(l1)
+print(type(l1))
+print(len(l1))
+print(l1[1])
+
+
+
+l1 = [10, 20, 30, 'python', 'adv python']*2
+l2 = [50]*5
+print(l1)
+print(l2)
+l3 = l1*2
+print(l3)
+
+l1 = [10, 20, 30, 'python', 'adv python']
+print(l1)
+l1[2] = 100
+print(l1)
+
+l1 = [10, 20, 30, 'python', 'adv python']
+print(l1)
+l1[2] = '45.5'
+print(l1)
+
+Slicing
+-------
+spliting data into the smaller parts 
+syntax
+-------
+listvariable[start : stop : step]
+start --> where we start
+stop --> when to stop (the last val is not considered)
+step --> skip
+         default val of step is 1
+         +ve --> forward direction 
+         -ve --> backward direction 
+
+
+l1 = [10, 20, 30, 'python', 'adv python', 56.12, 67.05, True, 40, 50, 60]
+print(l1)
+print(l1[1 : 5 ])
+print(l1[1 : 20 : 2])
+print(l1[10 : 1 : -1])
+print(l1[8 : 2 : -2])
+print(l1[-2 : -8 : -2])
+
+
+tuple --> ()
+------
+hetrogenous data 
+immutable 
+empty tuple
+type() 
+len()
+
+NOTE : single val inside braces()can't be considered as tuple 
+
+t1 = ()
+print(t1) --> tuple
+print(type(t1))
+t2 = (10, 20) 
+print(t2)   --> tuple
+print(type(t2))
+t3 = 30, 40
+print(t3)  --> tuple
+print(type(t3))
+t4 = 50
+print(type(t4))  --> int
+t5 = (100)
+print(type(t5))  --> int 
+t6 = (100, )
+print(type(t6)) --> tuple
+
+
+t1 = (10, 'python', 45.12, True, 100, 45, 'session')
+print(len(t1))
+print(t1[2])
+t2 = (10,)*5
+print(t2)
+print(t1[2: 5: 1])
+
+
+t1 = (10, 'python', 45.12, True, 100, 45, 'session')
+print(t1)
+t1[3] = 'programing'
+print(t1)
+--> gives error because tuple is immutable so assiging val is not possible 
+
+
+String --> ' ' / " "
+-------
+set of character 
+immutable 
+
+s1 = 'python'
+print(s1)
+s2 = ''
+print(s2)
+print(type(s2))
+print(len(s1))
+s3 = '200'
+print(type(s3))
+s4 = 'python, programming, session'
+print(s4)
+s5 = 'python', 'programming' --> not accepted
+print(s5)
+print(type(s5))
+
+
+s4 = 'python, programming, session'
+print(s4[10])
+s4[5]='x'--> not allowed (immutable)
+print(s4)
+print(s4[2: 15 : 1])
+
+
+set --> { } 
+----
+hetrogoneous data 
+stores in random 
+not allow duplicates 
+immutable
+
+l1 = {10, 20, 10, 30, 10, " bhargavi", "anu", "jai", True, 45.78}
+print(l1)
+empty set
+len
+type 
+
+
+s1 = {10, 20, 10, 30, 10, " bhargavi", "anu", "jai", True, 45.78}
+print(s1)
+s2 = { 10, 20, "anu", 100.1, 123}
+print(s2)
+print(s1|s2) #concat
+print(s1- s2) #diff
+print(s1 & s2) #comm
+
+l1 = [10, 20, 30]
+s1 = set(l1)
+print(l1)
+print(type(l1))
+print(s1)
+print(type(s1))
+
+
+Dictionary --> { } 
+-----------
+Key value pair 
+mutable 
+stu = {'name' : 'jai', 'rno' : 1001, 'age': 25, 'branch': None}
+print(stu)
+print(stu['name'])
+
+--------------------------------------------------------------------------------------------------
+Day 4
+------
+Inbuilt collection
+------------------
+
+List 
+-----
+l1 = [89, 45, 32, 67, 94, 41, 23, 12, 56]
+print(l1)
+'''l1[2] = 100
+print(l1)'''
+l1.insert(2, 100)
+print(l1)
+l1.append(200)
+print(l1)
+l1.append(150)
+print(l1)
+l1.insert(5, 250)
+print(l1)
+l1.pop() #defaultly delete the last value
+print(l1)
+l1.pop()
+print(l1)
+l1.remove(45) #remove the value
+print(l1)
+l1.pop(4) #remove value in that index
+print(l1)
+l1.remove(12)
+print(l1)
+l1.sort() #ascending order
+print(l1)
+l1.sort(reverse = True)
+print(l1)
+l1.sort(reverse = False)
+print(l1)
+l1 = [89, 45, 32, 67, 94, 0, 41, 23, 12, 1, 56, 10.003, True, False]
+print(l1)
+l1.sort()
+print(l1)
+print(min(l1))
+print(max(l1))
+
+
+Tuple()
+-------
+tup =  (11, 12, 45, 6, 0, 11, 13, 14, 67, 6,  89, 11 )
+print(tup[2])
+print(tup.index(89))
+print(tup)
+print(tup.index(11))
+print(tup.index(6))
+print(tup[5])
+print(sorted(tup))
+print(max(tup))
+print(min(tup))
+print(tup.count(11))
+print(len(tup))
+x = tuple(sorted(tup, reverse = True))
+print(x)
+
+
+String
+------
+s1 = "hello ALL very good morning"
+'''print(s1.upper())
+print(s1.lower())
+print(s1.title())'''
+print(s1.endswith('g'))
+print(s1.endswith('morning'))
+print(s1.startswith('h'))
+print(s1.startswith('H'))
+print(s1.startswith('hello'))
+print(s1.startswith('hai'))
+s1 = "hello ALL very good morning"
+s = s1.upper()
+print(s)
+print(s.isupper())
+print(s.islower())
+
+s1 = "hello"
+s2 = "hai"
+s3 = "HELLO"
+print(s1 == s2)
+print(s1 == s3)
+print(s1 > s3)
+print(s1 < s3)
+print(s1 is s2)
+print(s1 is s3)
+
+s = "123456aa"
+s1 = "abcd"
+print(type(s))
+print(s.isdigit())
+print(s1.isalpha())
+
+s2 = "hello ALL@very good morning"
+print(s2.find('v'))
+print(s2.count('o'))
+print(s2.replace('h', 'x'))
+print(s2.replace('o', 'O'))
+print(s2. split(' '))
+print(s2.split('@'))
+print(s2.split('o'))
+
+
+set
+---
+s1 ={10, 39, 5.6, 78.9, 45,}
+print(s1)
+s1.add(20)
+print(s1)
+s1.pop() #remove the first val
+print(s1)
+s = sorted(s1)
+print(s)
+s1. clear()
+print(s1)
+
+
+dictionary
+-----------
+course = {1 : 'python', 'a' : 'adv python', 3 : 'MongoDB', 4 : 'FLASK'}
+'''print(course)
+print(course.keys())
+print(course.values())
+print(course.items())
+course.update({5: 'mysql'})
+print(course)
+for x in course:
+    print(x)'''
+'''for x, y in course.items():
+    print(x,y)'''
+
+print(course['a'])
+
+
+using input function
+
+student = {}
+for i in range(2):
+    name = input("enter student name: ")
+    id = int(input("enter id:"))
+    student[id] = name
+print(student)
+
+
+
+Code Organization
+-----------------
+all the files (.py) --> module 
+package 
+
+flight --> manage flight --> add()
+
+Employeee --> manage employe --> add()
+
+
+call add() 
+
+flight / employee
+
+
+inorder to use package/ module
+------------------------------
+from packagename import module
+
+from math import sqrt
+
+import math
+
+
+manageflight -->
+add()
+
+
+Naming conflict
+----------------
+import flight.manage
+import employee.manage
+flight.manage.add()
+employee.manage.add()
+
+from math import sqrt
+num1 = 49
+print(sqrt(num1))
+
+import math
+num1 = 81
+print(math.sqrt(num1))
+a = 123.456
+b = 5
+c = -789
+print(math.ceil(a))
+print(math.floor(a))
+print(math.fabs(c))
+print(math.factorial(b))
+
+import random
+x = 10
+y = 60
+print(random.randrange(x, y))
+
+
+Regular expressions
+-------------------
+
+pattern / set of strings used to find the exact match
+
+email : @, domainname
+password :  1 digit
+            1 uppercase
+            1 special character
+
+
+Search
+
+Substitute
+
+we need to import the package re 
+
+import re 
+
+
+Syntax
+------
+variable_name = "message/data"
+re.search(r'pattern', variable_name)
+
+1.
+import re
+data = "hello all good afternoon"
+print(data)
+if(re.search("noon", data)!= None):
+    print("pattern found")
+else:
+    print("pattern not found")
+
+
+2.
+import re
+data = "hello all good afternoon"
+print(data)
+if(re.search("Good", data)!= None):
+    print("pattern found")
+else:
+    print("pattern not found")
+
+
+Syntax
+------
+variable_name = "msg/data"
+re.sub(r'pattern', 'newpattern', variable)
+
+
+import re
+data = "hello all good afternoon"
+print(data)
+print(re.sub("all", "everone", data))
+
+
+Meta character
+--------------
+. --> occurance of any character.
+--
+
+hello123 -----> ........ / h....... / h......3
+
+import re
+data = "h123o all good afternoon"
+print(data)
+if(re.search(r"h....o", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+
+\d  --> digits
+--- 
+
+h123o
+h\d\d\do
+
+
+import re
+data = "h123o all good afternoon"
+print(data)
+if(re.search(r"h\d\d\do", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+* --> any occurance of previous one (0 or more)
+--
+
+import re
+data = "h123456789o all good afternoon"
+print(data)
+if(re.search(r"h\d*o", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+import re
+data = "h123456789o all good afternoon"
+print(data)
+if(re.search(r"h.*o", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+
+
++  --> similar to * but it takes (1 or more )
+----
+
+import re
+data = "h111111o all good afternoon"
+print(data)
+if(re.search(r"h\d+o", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+
+import re
+data = "hello all good afternoon"
+print(data)
+if(re.search(r"h.+o", data) == None):
+    print("pattern not found")
+else:
+    print("pattern found")
+
+
+? --> check for digit / character
+--
+
+import re
+data = "hello all good afternoon"
+print(data)
+if(re.search(r"h...?o", data) != None):
+    print("pattern found")
+else:
+    print("pattern not found")
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Day 5
+-----
+File Handling
+--------------
+Placeholder/ storage used to store some data 
+
+text --> understanable by the user
+
+img
+pdf
+audio
+ppt
+xls
+
+binary --> understandable by the machine
+
+Step to be followed with pycharm
+--------------------------------
+
+1. create a text file
+    enter data / empty
+
+2. create a python file 
+     code for the file
+
+
+
+1. Create/ open a file --> mode of the file 
+2. process the file 
+3. close the file 
+
+
+Mode of the file 
+----------------
+read --> r
+
+if we open a file in read mode 
+it will check for the existence of file --> file available / not 
+if the file is available --> open the file 
+if the file is not available --> error
+
+
+write --> w
+if we open a file in write mode 
+it will check for the existence of file --> file available / not 
+if the file is available --> open the file as a new file 
+if the file is not available --> create a new file 
+
+
+append --> a
+if we open a file in append mode 
+it will check for the existence of file --> file available / not 
+if the file is available --> open the file to add the content at the end 
+if the file is not available --> create a new file 
+
+Syntax
+-------
+varaiable_name = open("file_name', "mode")
+
+variable_name.close()
+
+read
+-----
+f1 = open("sample.txt", "r")
+print(f1)
+
+read a single --> readline()
+-------------
+1. 
+
+f1 = open("demo.txt", "r")
+x = f1.readline()
+print(x)
+y = f1.readline()
+print(y)
+f1.close()
+
+
+2. --> throws error as the file has not opened after closing
+f1 = open("demo.txt", "r")
+x = f1.readline()
+print(x)
+y = f1.readline()
+print(y)
+f1.close()
+y = f1.readline()
+print(y)
+
+
+3.
+f1 = open("demo.txt", "r")
+x = f1.readline()
+print(x)
+y = f1.readline()
+print(y)
+f1.close()
+f1 = open("demo.txt", "r")
+y = f1.readline()
+print(y)
+
+
+read multiple/ all lines --> readlines()
+------------------------
+f1 = open("demo.txt", "r")
+x = f1.readlines()
+print(x)
+
+
+read lines one by one --> read()
+----------------------
+f1 = open("demo.txt", "r")
+x = f1.read()
+print(x)
+
+
+read set of characters --> read(n)
+------------------------
+f1 = open("demo.txt", "r")
+x = f1.read(10)
+print(x)
+
+
+
+print a specific line
+----------------------
+f1 = open("demo.txt", "r")
+x = f1.readlines()
+print(x)
+print(x[1])
+
+
+print no of lines
+---------------------
+f1 = open("demo.txt", "r")
+x = f1.readlines()
+print(x)
+print(len(x))
+
+
+
+write
+-----
+f1 = open("data.txt", "w")
+print(f1)
+
+f1 = open("demo.txt","w")
+w = f1.write("this is the first line\n")
+x = f1.write("this is the second line")
+print(w)
+
+
+
+2. 
+
+f1 = open("demo.txt","w")
+w = f1.write("this is the first line\n")
+x = f1.write("this is the second line")
+print(w)
+f1.close()
+y = f1.write("this is the new line") #error as file is closed
+
+
+append
+-------
+f1 = open("data.txt", "a")
+print(f1)
+
+f1 = open("demo.txt","a")
+w = f1.write("\nthis is the first line\n")
+x = f1.write("this is the second line")
+print(w)
+f1.close()
+
+attributes
+-----------
+tell() --> current position of the file 
+
+1.
+f1 = open("demo.txt", "r")
+print("before read", f1.tell())
+y = f1.readlines()
+print("after reading the cur pos is ", f1.tell())
+
+2.
+f1 = open("demo.txt", "r")
+print("before read", f1.tell())
+y = f1.readline()
+print("after reading the cur pos is ", f1.tell())
+z = f1.readline()
+print("after reading the cur pos is ", f1.tell())
+a = f1.readline()
+print("after reading the cur pos is ", f1.tell())
+
+3.
+f1 = open("demo.txt", "r")
+print("before read", f1.tell())
+y = f1.readlines()
+print("after reading the cur pos is ", f1.tell())
+
+
+
+
+seek() --> navigate to the position of the file 
+
+offset
+------
+0 --> it moves to the begining
+
+1 --> it will be in the current position 
+
+2 --> end of the file 
+
+
+whence
+-------
++ve --> navigating in forward direction from the position
+
+-ve --> navigating in backward direction from the position
+
+
+f1 = open("demo.txt", "rb+")
+y = f1.readline()
+print("after read line the pos is :", f1.tell())
+x = f1.seek(10, 2)
+print(x)
+
+
+other attributes
+--------------------
+f1 = open("demo.txt","r")
+y = f1.readline()
+print("file name:", f1.name)
+print("file mode", f1.mode)
+print("file closed / not:", f1.closed)
+f1.close()
+print("file closed / not:", f1.closed)
+
+
+
+Exceptional handling
+---------------------
+
+exceptions are kind of errors raised during the execution of the program
+
+exception can be handled 
+
+--> try 
+
+--> except
+
+--> finally 
+
+inbuilt exceptions
+------------------
+1. zero division error
+
+
+marks = 57
+try:
+    x = marks / 0
+except:
+    print("num is not divisible by 0")
+    print("inside except")
+
+print("out of exception")
+
+
+
+2. IndexError
+
+
+list = [10, 20, 30, 40, 50 ]
+try:
+    print(list[2])
+    print(list[3])
+    print(list[10])
+    print(list[5]) #will not execute
+except:
+    print("the specified range is not in the list ")
+
+3. NameError
+
+
+def fun(a):
+    if a > 5:
+        b = a / (a - 6)
+        print(b)
+    else:
+        #b = 10
+        print(b)
+try:
+    fun(3)
+except:
+    print("name error")
+
+
+2.
+
+def fun(a):
+    if a > 5:
+        b = a / (a - 6)
+        print(b)
+    else:
+        b = 10
+        print(b)
+try:
+    fun(3)
+except:
+    print("name error")
+finally:
+    print("always prints")
+
+
+
+
+4. ValueError
+
+val = "abc"
+try:
+    x = int(val)
+    print(x)
+except:
+    print("value error")
+
+
+ex
+---
+def fun(a):
+    if a > 5:
+        b = a / (a-6)
+        print(b)
+    else:
+        print(b)
+try:
+    fun(10)
+    fun(3)
+except ZeroDivisionError:
+    print("zero division error")
+except NameError:
+    print("name error")
+finally:
+    print("end of exception")
+
