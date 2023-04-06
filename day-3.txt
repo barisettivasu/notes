@@ -1,0 +1,412 @@
+# Scope of the variable:
+# visibility/ accessability of a parameter
+# it can be in same block / outside
+# local --> within the block
+# global --> variable can be used anywhere
+#1:
+'''def demo():
+    x = 25
+    print(x)
+demo()'''
+
+#Ans:
+# 25
+
+-------------------------------------------------------------------------------
+
+
+#2:
+x = 10 #global
+'''def demo():
+    print(x)
+demo()
+print("outside:", x)'''
+
+#Ans:
+# 10
+# outside: 10
+
+-------------------------------------------------------------------------------
+
+#3:
+'''def demo():
+    x = 25
+    print(x)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)'''
+
+#Ans:
+# 100
+# 25
+# error
+
+--------------------------------------------------------------------------------
+
+#4:
+'''x = 25
+def demo():
+
+    print(x)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)'''
+
+#Ans:
+# 100
+# 25
+# outside: 25
+
+----------------------------------------------------------------------------------
+
+#5:
+
+'''x = 25
+def demo():
+    print(y)
+def demo1():
+    x = 100
+    print(x)
+demo1()
+demo()
+print("outside:", x)'''
+
+#Ans:
+# 100
+# Traceback (most recent call last):
+#   File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\day3.py", line 68, in <module>
+#     demo()
+#   File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\day3.py", line 63, in demo
+#     print(y)
+#           ^
+# NameError: name 'y' is not defined
+
+-------------------------------------------------------------------------------------
+
+#6:
+'''a = 100
+def demo():
+    print("the val of a is :", a)
+def demo1():
+    b = a +100
+    print("val of b is :", b)
+    demo()
+demo()
+demo1()'''
+
+#Ans:
+# the val of a is : 100
+# val of b is : 200
+# the val of a is : 100
+
+---------------------------------------------------------------------------------------
+
+#7:
+
+'''def demo():
+    global a
+    a = 100
+    print("the val of a from demo is:", a)
+def demo1():
+    b = 200
+    c = a+b
+    print("the value of c from demo1 is : ", c)
+demo()
+demo1()
+print(a)'''
+
+#Ans:
+
+# the val of a from demo is: 100
+# the value of c from demo1 is :  300
+# 100
+
+------------------------------------------------------------------------------------------
+
+#Collections: collections are container which stores the set of values together
+# List
+# Tuple
+# String
+# Set
+# Dictionary
+# ---------------
+# types
+# -----
+# Mutable --> Whose value can be changed even after creating
+# Immutable -->Whose values cannot be changed once they are created
+# List --> []
+# ----
+# different types/set of data
+# mutable
+# empty list
+# definition
+# -----------
+# list_variable = [val1, val2, val3, ...........]
+# index =		 0       1     2   ...........
+#
+# l1 = [10, 	20, 		30, 40, 50]
+#     l1[0]   l1[1]   l1[2].......
+
+#1:
+'''l1 = [10, 20, 30]
+print(l1)
+print(type(l1))
+print(len(l1))
+print(l1[1])'''
+
+#Ans:
+# [10, 20, 30]
+# <class 'list'>
+# 3
+# 20
+
+---------------------------------------------------------------------------------
+
+#2:
+'''l1 = [10, 20, 30, 'python', 'adv python']*2
+l2 = [50]*5
+print(l1)
+print(l2)
+l3 = l1*2
+print(l3)'''
+
+#Ans:
+
+# [10, 20, 30, 'python', 'adv python', 10, 20, 30, 'python', 'adv python']
+# [50, 50, 50, 50, 50]
+# # [10, 20, 30, 'python', 'adv python', 10, 20, 30, 'python', 'adv python', 10, 20, 30, 'python', 'adv python', 10, 20, 30, 'python', 'adv python']
+
+----------------------------------------------------------------------------------------
+
+#3:
+'''l1 = [10, 20, 30, 'python', 'adv python']
+print(l1)
+l1[2] = 100
+print(l1)'''
+
+#Ans:
+# [10, 20, 30, 'python', 'adv python']
+# [10, 20, 100, 'python', 'adv python']
+
+-----------------------------------------------------------------------------------------
+
+#4:
+'''l1 = [10, 20, 30, 'python', 'adv python']
+print(l1)
+l1[2] = '45.5'
+print(l1)'''
+
+#Ans:
+# [10, 20, 30, 'python', 'adv python']
+# [10, 20, '45.5', 'python', 'adv python']
+
+-----------------------------------------------------------------------------------------
+
+# Slicing:spliting data into the smaller parts
+# syntax
+# -------
+# listvariable[start : stop : step]
+# start --> where we start
+# stop --> when to stop (the last val is not considered)
+# step --> skip
+#          default val of step is 1
+#          +ve --> forward direction
+#          -ve --> backward direction
+
+'''l1 = [10, 20, 30, 'python', 'adv python', 56.12, 67.05, True, 40, 50, 60]
+print(l1)
+print(l1[1 : 5 ])
+print(l1[1 : 20 : 2])
+print(l1[10 : 1 : -1])
+print(l1[8 : 2 : -2]) 
+print(l1[-2 : -8 : -2])'''
+
+#Ans:
+# [10, 20, 30, 'python', 'adv python', 56.12, 67.05, True, 40, 50, 60]
+# [20, 30, 'python', 'adv python']
+# [20, 'python', 56.12, True, 50]
+# [60, 50, 40, True, 67.05, 56.12, 'adv python', 'python', 30]
+# [40, 67.05, 'adv python']
+# [50, True, 56.12]
+
+--------------------------------------------------------------------------------------------
+
+
+# tuple -->()
+# -----------
+# hetrogenous data
+# immutable
+# empty tuple
+# type()
+# len()
+# NOTE : single val inside braces()can't be considered as tuple
+
+'''t1 = ()
+print(t1) #--> tuple
+print(type(t1))
+t2 = (10, 20)
+print(t2)   #--> tuple
+print(type(t2))
+t3 = 30, 40
+print(t3)  #--> tuple
+print(type(t3))
+t4 = 50
+print(type(t4))  #--> int
+t5 = (100)
+print(type(t5))  #--> int
+t6 = (100, )
+print(type(t6)) #--> tuple'''
+
+#Ans:
+# ()
+# <class 'tuple'>
+# (10, 20)
+# <class 'tuple'>
+# (30, 40)
+# <class 'tuple'>
+# <class 'int'>
+# <class 'int'>
+# <class 'tuple'>
+
+-----------------------------------------------------------------------------------------------
+
+'''t1 = (10, 'python', 45.12, True, 100, 45, 'session')
+print(len(t1))
+print(t1[2])
+t2 = (10,)*5
+print(t2)
+print(t1[2: 5: 1])'''
+
+#Ans:
+# 7
+# 45.12
+# (10, 10, 10, 10, 10)
+# (45.12, True, 100)
+
+-----------------------------------------------------------------------------------------------------------
+
+
+'''t1 = (10, 'python', 45.12, 'True', 100, 45, 'session')
+print(t1)
+t1[3] = 'programing'
+print(t1)'''
+#note:gives error because tuple is immutable so assiging val is not possible
+#Ans:
+# (10, 'python', 45.12, True, 100, 45, 'session')
+# Traceback (most recent call last):
+#   File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\day3.py", line 268, in <module>
+#     t1[3] = 'programing'
+#     ~~^^^
+# TypeError: 'tuple' object does not support item assignment
+
+------------------------------------------------------------------------------------------------------------
+
+
+# String --> ' ' / " "
+# -------
+# set of character
+# immutable
+
+'''s1 = 'python'
+print(s1)
+s2 = ''
+print(s2)
+print(type(s2))
+print(len(s1))
+s3 = '200'
+print(type(s3))
+s4 = 'python, programming, session'
+print(s4)
+s5 = 'python', 'programming'
+print(s5)
+print(type(s5))'''
+
+#Ans:
+
+# python
+#
+# <class 'str'>
+# 6
+# <class 'str'>
+# python, programming, session
+# ('python', 'programming')
+# <class 'tuple'>
+
+-----------------------------------------------------------------------------------------------
+
+'''s4 = 'python, programming, session'
+print(s4[10])
+s4[5]='x' #--> not allowed (immutable)
+print(s4)
+print(s4[2: 15 : 1])'''
+
+#Ans:
+# error
+
+
+-----------------------------------------------------------------------------------------------
+
+# set --> { }
+# ------------
+# hetrogoneous data
+# stores in random
+# not allow duplicates
+# immutable
+
+# s1 = {10, 20, 10, 30, 10, " bhargavi", "anu", "jai", True, 45.78}
+# print(s1)
+# s2 = { 10, 20, "anu", 100.1, 123}
+# print(s2)
+# print(s1|s2) #concat
+# print(s1- s2) #diff
+# print(s1 & s2) #comm
+
+#Ans:
+# {True, 10, 45.78, 'jai', 'anu', 20, ' bhargavi', 30}
+# {'anu', 100.1, 20, 10, 123}
+# {True, 100.1, 10, 45.78, 'jai', 'anu', 20, ' bhargavi', 123, 30}
+# {True, 45.78, 'jai', ' bhargavi', 30}
+# {10, 'anu', 20}
+
+---------------------------------------------------------------------------------------------
+
+'''l1 = [10, 20, 30]
+s1 = set(l1)
+print(l1)
+print(type(l1))
+print(s1)
+print(type(s1))'''
+
+#Ans:
+
+# [10, 20, 30]
+# <class 'list'>
+# {10, 20, 30}
+# <class 'set'>
+
+
+
+------------------------------------------------------------------------------------------------
+
+# Dictionary --> { }
+# -----------
+# Key value pair
+# mutable
+
+
+# stu = {'name' : 'jai', 'rno' : 1001, 'age': 25, 'branch': None}
+# print(stu)
+# print(stu['name'])
+
+#Ans:
+
+# {'name': 'jai', 'rno': 1001, 'age': 25, 'branch': None}
+# jai
+
+---------------------------------------------------------------------------------------------------
