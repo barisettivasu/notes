@@ -1,0 +1,199 @@
+# Inbuilt collection:
+# List :
+'''l1 = [89, 45, 32, 67, 94, 41, 23, 12, 56]
+print(l1)
+l1.insert(2, 100)
+print(l1)
+l1.append(200)
+print(l1)
+l1.append(150)
+print(l1)
+l1.insert(5, 250)
+print(l1)
+l1.pop() #defaultly delete the last value
+print(l1)
+l1.pop()
+print(l1)
+l1.remove(45) #remove the value
+print(l1)
+l1.pop(4) #remove value in that index
+print(l1)
+l1.remove(12)
+print(l1)
+l1.sort() #ascending order
+print(l1)
+l1.sort(reverse = True)
+print(l1)
+l1.sort(reverse = False)
+print(l1)
+l1 = [89, 45, 32, 67, 94, 0, 41, 23, 12, 1, 56, 10.003, True, False]
+print(l1)
+l1.sort()
+print(l1)
+print(min(l1))
+print(max(l1))'''
+
+#Ans:
+# [89, 45, 32, 67, 94, 41, 23, 12, 56]
+# [89, 45, 100, 32, 67, 94, 41, 23, 12, 56]
+# [89, 45, 100, 32, 67, 94, 41, 23, 12, 56, 200]
+# [89, 45, 100, 32, 67, 94, 41, 23, 12, 56, 200, 150]
+# [89, 45, 100, 32, 67, 250, 94, 41, 23, 12, 56, 200, 150]
+# [89, 45, 100, 32, 67, 250, 94, 41, 23, 12, 56, 200]
+# [89, 45, 100, 32, 67, 250, 94, 41, 23, 12, 56]
+# [89, 100, 32, 67, 250, 94, 41, 23, 12, 56]
+# [89, 100, 32, 67, 94, 41, 23, 12, 56]
+# [89, 100, 32, 67, 94, 41, 23, 56]
+# [23, 32, 41, 56, 67, 89, 94, 100]
+# [100, 94, 89, 67, 56, 41, 32, 23]
+# [23, 32, 41, 56, 67, 89, 94, 100]
+# [89, 45, 32, 67, 94, 0, 41, 23, 12, 1, 56, 10.003, True, False]
+# [0, False, 1, True, 10.003, 12, 23, 32, 41, 45, 56, 67, 89, 94]
+# 0
+# 94
+
+'''s1 = "hello ALL very good morning"
+print(s1.upper())
+print(s1.lower())
+print(s1.title())
+print(s1.endswith('g'))
+print(s1.endswith('morning'))
+print(s1.startswith('h'))
+print(s1.startswith('H'))
+print(s1.startswith('hello'))
+print(s1.startswith('hai'))'''
+
+#Ans:
+# HELLO ALL VERY GOOD MORNING
+# hello all very good morning
+# Hello All Very Good Morning
+# True
+# True
+# True
+# False
+# True
+# False
+
+'''s1 = "hello ALL very good morning"
+s = s1.upper()
+print(s)
+print(s.isupper())
+print(s.islower())'''
+
+#Ans:
+# HELLO ALL VERY GOOD MORNING
+# True
+# False
+
+'''s1 = "hello"
+s2 = "hai"
+s3 = "HELLO"
+print(s1 == s2)
+print(s1 == s3)
+print(s1 > s3)
+print(s1 < s3)
+print(s1 is s2)
+print(s1 is s3)'''
+
+#Ans:
+# False
+# False
+# True
+# False
+# False
+# False
+
+'''s = "123456aa"
+s1 = "abcd"
+print(type(s))
+print(s.isdigit())
+print(s1.isalpha())'''
+
+#Ans:
+# <class 'str'>
+# False
+# True
+
+'''s2 = "hello ALL@very good morning"
+print(s2.find('v'))
+print(s2.count('o'))
+print(s2.replace('h', 'x'))
+print(s2.replace('o', 'O'))
+print(s2. split(' '))
+print(s2.split('@'))
+print(s2.split('o'))'''
+
+#Ans:
+# 10
+# 4
+# xello ALL@very good morning
+# hellO ALL@very gOOd mOrning
+# ['hello', 'ALL@very', 'good', 'morning']
+# ['hello ALL', 'very good morning']
+# ['hell', ' ALL@very g', '', 'd m', 'rning']
+
+#set:
+
+'''s1 ={10, 39, 5.6, 78.9, 45,}
+print(s1)
+s1.add(20)
+print(s1)
+s1.pop() #remove the first val
+print(s1)
+s = sorted(s1)
+print(s)
+s1. clear()
+print(s1)'''
+
+#Ans:
+# {5.6, 39, 10, 45, 78.9}
+# {20, 5.6, 39, 10, 45, 78.9}
+# {5.6, 39, 10, 45, 78.9}
+# [5.6, 10, 39, 45, 78.9]
+
+# set()
+'''course = {1 : 'python', 'a' : 'adv python', 3 : 'MongoDB', 4 : 'FLASK'}
+print(course)
+print(course.keys())
+print(course.values())
+print(course.items())
+course.update({5: 'mysql'})
+print(course)
+for x in course:
+    print(x)
+for x, y in course.items():
+    print(x,y)
+print(course['a'])'''
+#Ans:
+# {1: 'python', 'a': 'adv python', 3: 'MongoDB', 4: 'FLASK'}
+# dict_keys([1, 'a', 3, 4])
+# dict_values(['python', 'adv python', 'MongoDB', 'FLASK'])
+# dict_items([(1, 'python'), ('a', 'adv python'), (3, 'MongoDB'), (4, 'FLASK')])
+# {1: 'python', 'a': 'adv python', 3: 'MongoDB', 4: 'FLASK', 5: 'mysql'}
+# 1
+# a
+# 3
+# 4
+# 5
+# 1 python
+# a adv python
+# 3 MongoDB
+# 4 FLASK
+# 5 mysql
+# adv python
+
+'''student = {}
+for i in range(2):
+    name = input("enter student name: ")
+    id = int(input("enter id:"))
+    student[id] = name
+print(student)'''
+
+#Ans:
+# enter student name: vasu
+# enter id:12
+# enter student name: suri
+# enter id:11
+# {12: 'vasu', 11: 'suri'}
+
+
