@@ -1,0 +1,114 @@
+#printing,type and len of statements
+'''print('hello welcome to pycharm')
+print("this is imp class")
+print("adding the values")
+#variable refer
+a = 10
+b = 40.55
+c= "python"
+print(a+b)
+print(a)
+print(type(a))
+print(type(b))
+print(c)
+print(type(c))
+print(len(c))'''
+
+#Ans:
+#hello welcome to pycharm
+#this is imp class
+#adding the values
+#50.55
+#10
+#<class 'int'>
+#<class 'float'>
+#python
+#<class 'str'>
+#6
+----------------------------------------------------------------
+
+#input function executes and takes by default as string
+'''x = input("enter the x value")
+print("entered value is:", x)
+print(type(x))'''
+
+#Ans:
+#enter the x value20
+#entered value is: 20
+#<class 'str'>
+
+-------------------------------------------------------------------
+
+'''#implicity type converstion
+a = 123
+b = 45.678
+print(type(a))
+print(type(b))
+print(a+b)
+print(type(a + b))#int+floats shows like float'''
+
+#Ans:
+
+#<class 'int'>
+#<class 'float'>
+#168.678
+#<class 'float'>
+----------------------------------------------------------------------
+
+#explicity type converstion
+"""#1::
+a = input("enter value")
+b = 345
+print(type(a))
+print(type(b))
+print(a+b)#here we get an error becoz int+string can't be added."""
+
+#Ans:
+#enter value20
+#<class 'str'>
+#<class 'int'>
+#Traceback (most recent call last):
+#  File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\sample.py", line 5, in <module>
+#    print(a+b)#here we get an error becoz int+string can't be added.
+#          ~^~
+#TypeError: can only concatenate str (not "int") to str
+
+----------------------------------------------------------------------
+
+#2::input function consider as float or int
+a = float(input("enter value"))
+b = 345
+print(type(a))
+print(type(b))
+print(a+b)
+print(type(a+b))
+
+#Ans:
+#enter value20
+#<class 'float'>
+#<class 'int'>
+#365.0
+#<class 'float'>
+
+----------------------------------------------------------------------
+#or
+----------------------------------------------------------------------
+a = input("enter value")
+b = 34
+print(type(a))
+print(type(b))
+print(float(a)+int(b))
+#string is becomes a integer
+a = "10"
+b = 20
+print(int(a)+b)
+
+#Ans:
+#enter value20
+#<class 'str'>
+#<class 'int'>
+#54.0
+#30
+
+---------------------------------------------------------------------------
+#more we have another,keywords and operators like arthematic,relational,assignment and logical
