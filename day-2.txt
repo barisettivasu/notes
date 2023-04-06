@@ -1,0 +1,501 @@
+'''#if statements
+# if the condition is true --> true block
+# if the condition is false --> outside
+a = 100
+b = 200
+if a < b:
+    print("a is greater")
+print("outside of if ")
+print("always execute")
+
+#Ans:
+# a is greater
+# outside of if 
+# always execute
+------------------------------------------------------------------------------
+
+# if - else
+# if the condition is true --> true block
+# if the condition is false --> else block
+#1
+a = 100
+b = 200
+if a < b:
+    print("a is greater")
+    print("inside if")
+else:
+    print("b is greater")
+    print("inside else")
+print("outside of if ")
+print("always execute")
+
+#Ans:
+# a is greater
+# inside if
+# outside of if 
+# always execute
+----------------------------------------------------------------------------
+
+#2
+a = int(input("enter no"))
+b = int(input("enter no"))
+if a < b:
+    print("b is greater")
+    print("inside if")
+    print("bye")
+else:
+    print("a is greater")
+    print("inside else")
+    print("bye")
+print("outside of if ")
+print("always execute")
+
+Ans:
+# enter no10
+# enter no20
+# b is greater
+# inside if
+# bye
+# outside of if 
+# always execute
+-----------------------------------------------------------------------------
+
+#3
+# nested if
+# multiple condition
+# Representing if block inside another if
+x = 35
+if x > 10:
+    print("above 10")
+    if x > 20:
+        print("above 20")
+        if x > 30:
+            print("above 30")
+        else:
+            print("not above 30")
+    else:
+        print("not above 20")
+else:
+    print("not above 10")
+print("out of if")
+
+#Ans:
+# above 10
+# above 20
+# above 30
+# out of if
+---------------------------------------------------------------------------
+
+#4
+# Else - if
+# check for the condition
+# if condition is true --> execute the statement
+# if condition is false --> checks the condition
+x = 50
+y = 20
+if x > y:
+    print("x is greater")
+elif x == y:
+    print("x, y are equal")
+else:
+    print("y is greater")
+print("out of if ")
+
+#Ans:
+# x is greater
+# out of if 
+---------------------------------------------------------------------------
+
+# Looping statements
+# repeating the set of statements for multiple times
+#range -->
+# start value
+# end  value
+# step value (optional) --> +ve(increase by 1), -ve(decrease by 1)
+# default value of step is 1(increase by 1)
+# Note : last/ end value of the range will not be considered
+# for
+#1. With range
+for i in range(1, 10, 3):
+    print(i)
+#Ans:
+# 1
+# 4
+# 7
+----------------------------------------------------------------------------
+
+#2. With range
+for i in range(21, 0, -5):
+    print(i)
+#Ans:
+# 21
+# 16
+# 11
+# 6
+# 1
+
+------------------------------------------------------------------------------
+
+#3. Without range
+for i in 5, 10, 15, 20:
+    print(i)
+#Ans:
+# 5
+# 10
+# 15
+# 20'''
+
+----------------------------------------------------------------------------
+
+#4. with and witout range
+'''for i in 5, 10, 15, 20:
+    for num in range(1, 3):
+        x = i * num
+        print(x)'''
+#Ans:
+# 5
+# 10
+# 10
+# 20
+# 15
+# 30
+# 20
+# 40
+
+---------------------------------------------------------------------------
+
+#5.
+'''for i in 5, 10, 15, 20:
+    for num in range(1, 3):
+        x = i * num
+        print(x, end = ",")'''
+#Ans:
+#5,10,10,20,15,30,20,40,
+
+-----------------------------------------------------------------------------
+
+# while
+# While condition:block of code
+'''i = 1
+while i < 10:
+    print(i)
+    i += 1
+print("out of while")'''
+
+#Ans:
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# out of while
+----------------------------------------------------------------------------
+
+#break :break the flow of execution
+'''i = 1
+while i < 10:
+    print(i)
+    if i == 5:
+        break
+    i += 1
+print("out of while")'''
+#Ans:
+# 1
+# 2
+# 3
+# 4
+# 5
+# out of while
+
+----------------------------------------------------------------------------
+
+#continue:skip the current execution and continue with other
+'''i = 1
+while i < 20:
+    i += 1
+    if i == 10:
+        continue
+    print(i)
+print("out of while")'''
+
+#Ans:
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# 20
+# out of while
+
+-----------------------------------------------------------------------------
+
+#Function:
+# block of statements to perform a specific task
+# reuse
+# 1. define the function --> task
+# 2. function call --> use definition of the function
+# return --> give result
+# pass --> null statement
+# Note : execution starts from fun call/ statement
+'''def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+print("execution starts here")
+print("hai all")
+sum()'''  #function call
+#Ans:
+# execution starts here
+# hai all
+# 30
+
+-----------------------------------------------------------------------------
+
+#2:
+'''def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+sub() #fun call
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()'''  #function call
+#Ans:
+# 10
+# execution starts here
+# hai all
+# 30
+# 10
+# 30
+
+----------------------------------------------------------------------------
+
+#3:No error as fun call is inside other function
+'''def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+    sub() #fun call
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()'''  #function call
+#Ans:
+# execution starts here
+# hai all
+# 30
+# 10
+# 10
+# 30
+# 10
+
+-----------------------------------------------------------------------------
+
+#4:Throws an error as fun call is before fun definition
+'''def sum(): #fun def
+    a = 10
+    b = 20
+    print(a+b)
+sub() #fun call
+def sub():
+    a = 15
+    b = 5
+    print(a - b)
+
+print("execution starts here")
+print("hai all")
+sum()  #function call
+sub()  #function call
+sum()'''  #function call
+#Ans: error throwing
+# Traceback (most recent call last):
+#   File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\day2.py", line 262, in <module>
+#     sub() #fun call
+#     ^^^
+# NameError: name 'sub' is not defined. Did you mean: 'sum'?
+
+----------------------------------------------------------------------------
+
+#Pass --> null statement
+'''def sum():
+    pass
+def sub():
+    pass
+def mul():
+    pass
+def div():
+    pass
+sum()
+sub()
+mul()
+div()'''
+
+#Ans:here no data found passing the arguments.
+
+--------------------------------------------------------------------------------
+
+#return:return the result back to the function call
+#1:
+'''def sum():
+    a = 10
+    b = 20
+    c = a + b
+    return c
+x = sum()
+print(x)'''
+#Ans:
+# 30
+
+------------------------------------------------------------------------------
+
+#2:
+'''def sum():
+    a = 10
+    b = 20
+    c = a + b
+    return c
+print(sum())'''
+#Ans:
+# 30
+
+----------------------------------------------------------------------------
+
+# Parameters / argument:
+# 1.actual arguments
+# value that is passed with fun call
+# 2.formal arguments
+# value that is used at fun definition
+
+#1:
+'''def sum(a, b):
+    c = a + b
+    print(c)
+sum(10, 20)'''
+#Ans:
+# 30
+
+-------------------------------------------------------------------------------
+
+#2:
+'''def sum(a, b):
+    c = a + b
+    print(c)
+a = 23
+b = 45
+sum(a, b)'''
+#Ans:
+# 68
+
+-----------------------------------------------------------------------------
+
+#3:
+'''def sum(a, b):
+    c = a + b
+    print(c)
+a = int(input("enter a"))
+b = int(input("enter b"))
+sum(a, b)'''
+#Ans:
+# enter a12
+# enter b30
+# 42
+-----------------------------------------------------------------------------
+
+# passing the value:
+# pass by value --> no change --> immutable
+# pass by reference --> changes --> mutable
+# type of arguments:
+# --------------------
+# 1. positional argument
+#no of arguments/ values in fun call should be equal to no of arguments in fun definition
+'''def sum(a, b, x):  #by default a = 10, b = 20, x = 30, 40?
+    c = a + b + x
+    print(c)
+sum(10, 20, 30, 40)'''
+# Ans:
+# Traceback (most recent call last):
+#   File "C:\Users\vasu.barisetti\PycharmProjects\pythonProject\day2.py", line 363, in <module>
+#     sum(10, 20, 30, 40)
+# TypeError: sum() takes 3 positional arguments but 4 were given
+
+----------------------------------------------------------------------------------
+
+#2:keyword argument
+# the values are assigned to the specific key
+'''def sum(a, b, x):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+    c = a + b + x
+    print(c)
+sum(b = 10, x = 20, a = 30)'''
+
+#Ans:
+# the val of a is : 30
+#  the val of b is : 10
+#  the val of x is : 20
+# 60
+
+----------------------------------------------------------------------------
+
+# 3.default argument:
+# will store the value by default, which will not change
+# Note : the default value should be at the end
+'''def sum(a, b, x, y = 100):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+    c = a + b + x + y
+    print(c)
+sum(100, 200, 300)'''
+#Ans:
+# the val of a is : 100
+#  the val of b is : 200
+#  the val of x is : 300
+# 700
+
+-------------------------------------------------------------------------------
+
+# 4. variable argument:
+# if there extra values in the fun call it should be holded
+# variable argument will hold with *
+def sum(a, b, *x):
+    print(" the val of a is :", a)
+    print(" the val of b is :", b)
+    print(" the val of x is :", x)
+sum(100, 200, 300, 500, 789, 123)
+
+#Ans:
+the val of a is : 100
+the val of b is : 200
+the val of x is : (300, 500, 789, 123)
+
+------------------------------------------------------------------------------
